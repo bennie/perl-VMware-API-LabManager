@@ -1,9 +1,10 @@
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    'NAME'         => 'Text::Delimited',
-    'VERSION_FROM' => 'lib/Text/Delimited.pm',
+    'NAME'         => 'VMware::API::LabManager',
+    'VERSION_FROM' => 'lib/VMware/API/LabManager.pm',
+    'PREREQ_PM'    => { 'SOAP::Lite' => '0' },
     ($] >= 5.005 ?
-      (ABSTRACT_FROM => 'lib/Text/Delimited.pm',
+      (ABSTRACT_FROM => 'lib/VMware/API/LabManager.pm',
        AUTHOR     => 'Phillip Pollard <bennie@cpan.org>') : ()),
 );
