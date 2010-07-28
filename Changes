@@ -1,18 +1,27 @@
 Revision history for VMware::API::LabManager
 
-1.2  2010/07/26
+1.2  2010/07/27
 
-  Corrected prerequist declarations in Makefile.PL
+  Added:
+    priv_ConfigurationArchiveEx()
+    priv_ConfigurationCloneToWorkspace()
 
-  Improved documentation
+  Improved:
+    priv_LibraryCloneToWorkspace()
 
-1.1  2010/07/24
+  Corrected prerequiste declarations in Makefile.PL
+
+  Improved the POD documentation
+
+1.1 (1.0) 2010/07/24
 
   Moved all printing on STDOUT to a debug method.
 
+  Split private and public SOAP calls to use their respective URLs.
+
   Provided option to handle faults without a forced die()
 
-  Added to some and standardized fault handling on all methods.
+  Standardized fault handling on all methods.
 
   Added the following private API calls:  
 
