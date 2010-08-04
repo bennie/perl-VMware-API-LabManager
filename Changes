@@ -1,5 +1,16 @@
 Revision history for VMware::API::LabManager
 
+1.3  2010/08/03
+
+  Added auth header test.
+
+  Resolved bug on load test by removing unneeded SOAP query in new()
+
+  Corrected string / void context errors in:
+    priv_ConfigurationArchiveEx()
+    priv_ConfigurationCaptureEx()
+    priv_LibraryCloneToWorkspace()    
+
 1.2  2010/07/27
 
   Added:
