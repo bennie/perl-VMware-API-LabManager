@@ -1,5 +1,22 @@
 Revision history for VMware::API::LabManager
 
+1.4  2010/08/17
+
+  Added:
+    priv_ConfigurationChangeOwner()
+    priv_GetAllWorkspaces()
+    priv_GetOrganization()
+    priv_GetOrganizations()
+    priv_GetOrganizationByName()
+    priv_GetOrganizationWorkspaces()
+    priv_GetUser()
+
+  Improved:
+    ListConfigurations() - documentation
+    priv_GetWorkspaceByName() - fault handling
+
+  Created a TODO file
+
 1.3  2010/08/03
 
   Added auth header test.
