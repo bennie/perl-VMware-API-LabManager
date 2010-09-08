@@ -1,6 +1,10 @@
 Revision history for VMware::API::LabManager
 
-1.7  DATETAG
+1.8  DATETAG
+
+  POD cleanup.
+
+1.7  2010/09/01
 
   Added "WISH LIST" to the POD.
 
