@@ -1,38 +1,51 @@
 #!/usr/bin/perl
 
+=head1 hwupgrade.pl
+
+This example script demonstrates the Lab Manager private API call 
+priv_MachineUpgradeVirtualHardware(). This upgrades the virtual hardware 
+on the given machine if it is out of date. (For example, when upgrading 
+from LabMan 3.x to 4.x, the virtual hardware of each VM should be 
+upgraded from v4 to v7.)
+
+=head3 Parameters
+
+ --server    - LabManager server to connect to
+ --username  - Username to use to perform this action with
+ --password  - Password for the above username
+
+ --config - Name of the configuration to upgrade virtual hardware for
+
+=cut
+
 use Data::Dumper;
+use Getopt::Long;
 use VMware::API::LabManager;
 use strict;
 
-my $version = ( split ' ', '$Revision: 1.1 $' )[1];
+my $version = ( split ' ', '$Revision: 1.2 $' )[1];
 
-### Configuration
-
-my $username  = 'sbo-migration';
-my $password  = 'welcome1';
-my $server    = '10.198.138.73'; # Target
-
+my ( $username, $password, $server, $configname );
 my $orgname   = 'Global';
 my $workspace = 'Main';
 
+my $ret = GetOptions ( 'username=s' => \$username, 'password=s' => \$password,
+                       'orgname=s' => \$orgname, 'workspace=s' => \$workspace   
+                       'server=s' => \$server, 'config=s' => \$configname );
+
 my $labman = new VMware::API::LabManager (
-  $username,        # Username
-  $password,        # Password
-  $server,          # Server
-  $orgname,         # Org Name
-  $workspace        # Workspace Name
+  $username, $password, $server, $orgname, $workspace                        
 );
 
-my $configs = $labman->GetConfigurationByName('vmware-testrun2-01');
-my $config = $configs->[0];
+my $configs = $labman->GetConfigurationByName($configname);
+my $config = $configs->[0]; # GetConfigurationByName returns an array of configs
+                            # that match the name. For this script, I'm only
+                            # going to look at the first one.
 
 my $machines = $labman->ListMachines($config->{id});
-my $machine = $machines->[0];
 
-my $machine_id = $machines;
-
-print "Upgrading hardware for $machine->{id}\n";
-
-my $ret = $labman->priv_MachineUpgradeVirtualHardware( $machine->{id} );
-
-print Dumper($ret);
+for my $machine (@$machines) {
+  print "Upgrading hardware for $machine->{name} ($machine->{id})\n";
+  my $ret = $labman->priv_MachineUpgradeVirtualHardware( $machine->{id} );
+  print Dumper($ret);
+}

@@ -1,28 +1,43 @@
 #!/usr/bin/perl
 
+=head1 list-machines.pl
+
+This example script demonstrates the Lab Manager API call 
+ListMachines(). This call returns an array of machine objects that are 
+found within the configuration provided.
+
+Data::Dumper is used to print the returned array of objects.
+
+=head3 Parameters
+
+ --server    - LabManager server to connect to
+ --username  - Username to use to perform this action with
+ --password  - Password for the above username
+
+ --config - Name of the configuration to upgrade virtual hardware for
+
+=cut
+
 use Data::Dumper;
+use Getopt::Long;
 use VMware::API::LabManager;
 use strict;
 
-my $version = ( split ' ', '$Revision: 1.1 $' )[1];
+my $version = ( split ' ', '$Revision: 1.2 $' )[1];
 
-### Configuration
-
-my $username  = 'ppollard';
-my $password  = 'z2A3p464';
+my ( $username, $password, $server);
 my $orgname   = 'Global';
 my $workspace = 'Main';
-my $server    = '10.198.138.73'; # Source
+
+my $ret = GetOptions ( 'username=s' => \$username, 'password=s' => \$password,
+                       'orgname=s' => \$orgname, 'workspace=s' => \$workspace
+                       'server=s' => \$server );
 
 my $labman = new VMware::API::LabManager (
-  $username,        # Username
-  $password,        # Password
-  $server,          # Server
-  $orgname,         # Org Name
-  $workspace        # Workspace Name
+  $username, $password, $server, $orgname, $workspace
 );
 
-my $configs = $labman->ListConfigurations(1);
+my $configs = $labman->ListConfigurations(1); # 1 - configs, not library entries
 my $config = $configs->[0];
 
 my $machines = $labman->ListMachines($config->{id});

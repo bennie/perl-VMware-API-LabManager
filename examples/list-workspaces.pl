@@ -1,10 +1,11 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
+use Getopt::Long;
 use VMware::API::LabManager;
 use strict;
 
-my $version = ( split ' ', '$Revision: 1.1 $' )[1];
+my $version = ( split ' ', '$Revision: 1.2 $' )[1];
 
 ### Configuration
 

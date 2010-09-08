@@ -1,28 +1,29 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
+use Getopt::Long;
 use VMware::API::LabManager;
 use strict;
 
-my $version = ( split ' ', '$Revision: 1.1 $' )[1];
+my $version = ( split ' ', '$Revision: 1.2 $' )[1];
 
-### Configuration
-
-my $username  = 'sbo-migration';
-my $password  = 'welcome1';
+my ( $username, $password, $server);
 my $orgname   = 'Global';
 my $workspace = 'Main';
-my $server    = '10.198.138.73';
+
+my $ret = GetOptions ( 'username=s' => \$username, 'password=s' => \$password,
+                       'orgname=s' => \$orgname, 'workspace=s' => \$workspace   
+                       'server=s' => \$server );
 
 my $labman = new VMware::API::LabManager (
-  $username,        # Username
-  $password,        # Password
-  $server,          # Server
-  $orgname,         # Org Name
-  $workspace        # Workspace Name
+  $username, $password, $server, $orgname, $workspace                        
 );
 
 print "THIS WILL DELETE EVERYTHING ON THE TARGET LAB MANAGER SERVER: $server\n\nCTRL-C to avoid this. RETURN to continue with deletion.\n";
+
+<STDIN>;
+
+print "NO REALLY. I MEAN IT. --> EVERYTHING <-- WILL BE DELETED.\n\nCTRL-C to avoid this. RETURN to continue with deletion.\n";
 
 <STDIN>;
 
@@ -48,7 +49,7 @@ for my $temp (@templates) {
   my $id = $temp->{id};
   my $name = $temp->{name};
 
-  next if $name =~ /^VMwareLM-ServiceVM/; # WTF?
+  next if $name =~ /^VMwareLM-ServiceVM/; # Internal labman machine
 
   if ( $temp->{isDeployed} eq 'true' ) {  
     print "Undeploying template: $name ($id)\n";

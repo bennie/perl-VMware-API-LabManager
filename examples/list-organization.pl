@@ -1,26 +1,22 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
+use Getopt::Long;
 use VMware::API::LabManager;
 use strict;
 
-my $version = ( split ' ', '$Revision: 1.1 $' )[1];
+my $version = ( split ' ', '$Revision: 1.2 $' )[1];
 
-### Configuration
-
-my $username  = 'migration';
-my $password  = 'welcome1';
-my $server    = '10.207.251.54'; # Prod source
-
+my ( $username, $password, $server);
 my $orgname   = 'Global';
 my $workspace = 'Main';
 
+my $ret = GetOptions ( 'username=s' => \$username, 'password=s' => \$password,
+                       'orgname=s' => \$orgname, 'workspace=s' => \$workspace   
+                       'server=s' => \$server );
+
 my $labman = new VMware::API::LabManager (
-  $username,        # Username
-  $password,        # Password
-  $server,          # Server
-  $orgname,         # Org Name
-  $workspace        # Workspace Name
+  $username, $password, $server, $orgname, $workspace                        
 );
 
 my $orgs = $labman->priv_GetOrganizations();
