@@ -5,7 +5,7 @@ use strict;
 BEGIN { plan tests => 11 };
 
 my $labman = new VMware::API::LabManager (
-  qw/username password localhost organizationname workspacename 0 0/
+  qw/username password localhost organizationname workspacename/
 );
 
 ok( ref $labman->{auth_header} eq 'SOAP::Header' );
