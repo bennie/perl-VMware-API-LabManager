@@ -1,6 +1,20 @@
 Revision history for VMware::API::LabManager
 
-1.8  DATETAG
+1.9  DATETAG
+
+  Added example script:
+    list-configurations.pl
+
+  Corrected:
+    Syntax error on all example scripts.
+
+  Improved:
+    Command line parameter checks added to all example scripts.
+
+1.8  2010/09/13
+  
+  Added header test:
+    02-header.t - SOAP connection header tests
   
   Improved:
     GetMachineByName() - Clenaed up perl syntax.
