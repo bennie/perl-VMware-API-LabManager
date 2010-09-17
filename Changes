@@ -1,6 +1,8 @@
 Revision history for VMware::API::LabManager
 
-1.9  DATETAG
+1.10  DATETAG
+
+1.9  2010/09/17
 
   Added example script:
     list-configurations.pl
