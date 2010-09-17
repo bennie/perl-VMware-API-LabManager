@@ -10,10 +10,14 @@ Revision history for VMware::API::LabManager
 
   Improved:
     Command line parameter checks added to all example scripts.
+    Accidental UTF characters (curly quotes) removed from POD.
+    UserPerformAction() added to WISH LIST section of POD.
+    Trailing spaces removed from all lines.
+    Small POD cleanups.
 
 1.8  2010/09/13
   
-  Added header test:
+  Added test:
     02-header.t - SOAP connection header tests
   
   Improved:
