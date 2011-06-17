@@ -2,6 +2,16 @@ Revision history for VMware::API::LabManager
 
 1.10  DATETAG
 
+  Added:
+    Example configuration to POD.
+
+  Corrected:
+    Quoting error in unknown parameter warning for config()
+
+  Improved:
+    Minor POD cleanups.
+    Added 'Crypt::SSLeay' as a prerequisite. (Used by SOAP::Lite for HTTPS)
+
 1.9  2010/09/17
 
   Added example script:
@@ -15,7 +25,7 @@ Revision history for VMware::API::LabManager
     Accidental UTF characters (curly quotes) removed from POD.
     UserPerformAction() added to WISH LIST section of POD.
     Trailing spaces removed from all lines.
-    Small POD cleanups.
+    Minor POD cleanups.
 
 1.8  2010/09/13
   
