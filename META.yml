@@ -6,7 +6,8 @@ version:      VERSIONTAG
 version_from: lib/VMware/API/LabManager.pm
 
 requires:
-  SOAP::Lite: 0
+  Data::Dumper: 0
+  SOAP::Lite: 0.71
   Crypt::SSLeay: 0
 
 distribution_type: module
