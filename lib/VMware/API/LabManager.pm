@@ -1,5 +1,6 @@
 package VMware::API::LabManager;
 
+use Data::Dumper;
 use SOAP::Lite; # +trace => 'debug';
 use warnings;
 use strict;
@@ -2850,6 +2851,7 @@ Boy would this make my life easier to debug issues quickly.
 
 =head1 CONTRIBUTIONS
 
+  John Barker, <john@johnrbarker.com>
   Cameron Berkenpas <cberkenpas@paypal.com>
 
 =head1 DEPENDENCIES

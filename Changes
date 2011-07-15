@@ -1,6 +1,11 @@
 Revision history for VMware::API::LabManager
 
-1.10  DATETAG
+1.11  DATETAG
+
+  Corrected:
+    Call of Data::Dumper without instancing the module.
+
+1.10  2010/09/17
 
   Added:
     Example configuration to POD.
