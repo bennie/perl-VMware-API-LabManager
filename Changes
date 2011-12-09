@@ -1,9 +1,13 @@
 Revision history for VMware::API::LabManager
 
-1.11  DATETAG
+REVISION  DATETAG
 
   Corrected:
     Call of Data::Dumper without instancing the module.
+
+  Improved:
+    Added -I to example scripts for local execution within the distribution
+    Added an ENV workaround for self-signed certs due to changes in LWP
 
 1.10  2010/09/17
 
