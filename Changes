@@ -1,6 +1,6 @@
 Revision history for VMware::API::LabManager
 
-REVISION  DATETAG
+VERSIONTAG  DATETAG
 
   Corrected:
     Call of Data::Dumper without instancing the module.
