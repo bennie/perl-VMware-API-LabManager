@@ -1,5 +1,10 @@
 package VMware::API::LabManager;
 
+BEGIN {
+  our %ENV;
+  $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0; # Workaround for self-signed certs
+}
+
 use Data::Dumper;
 use SOAP::Lite; # +trace => 'debug';
 use warnings;
