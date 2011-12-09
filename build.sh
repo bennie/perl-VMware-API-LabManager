@@ -2,7 +2,7 @@
 set -e
 
 MODULE='lib/VMware/API/LabManager.pm'
-VERSION=`cvs status $MODULE | grep Working | awk '{ print $3 }' | tr '.' ' ' | awk '{ printf "v%d.900.%02d", $1, $2 }'`
+VERSION=`cvs status $MODULE | grep Working | awk '{ print $3 }' | tr '.' ' ' | awk '{ printf "v%d.%02d", $1, $2 }'`
 DATE=`date '+%Y/%m/%d'`
 TARDIR="VMware-API-LabManager-$VERSION";
 
