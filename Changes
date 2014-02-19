@@ -4,6 +4,7 @@ VERSIONTAG  DATETAG
 
   Improved:
     Changed 'Crypt::SSLeay' prerequisite to 'Net:SSL'
+    Removed the RCS style 'Revision' version info from the example scripts
 
 2.03  2014/02/18
 
