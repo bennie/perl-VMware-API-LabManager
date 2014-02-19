@@ -1,10 +1,8 @@
 package VMware::API::LabManager;
 
 # Workaround for self-signed certs
-BEGIN {
-   $ENV{PERL_NET_HTTPS_SSL_SOCKET_CLASS} = "Net::SSL";
-   $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
-}
+$ENV{PERL_NET_HTTPS_SSL_SOCKET_CLASS} = "Net::SSL";
+$ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
 
 use Data::Dumper;
 use SOAP::Lite; # +trace => 'debug';

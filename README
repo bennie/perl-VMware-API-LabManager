@@ -29,9 +29,9 @@ USAGE:
 AUTHORSHIP:
 ================================================================================
 
-    VMware::API::LabManager vVERSIONTAG (DATETAG)
+    VMware::API::LabManager VERSIONTAG (DATETAG)
 
-    (c) 2009-2010, Phillip Pollard <bennie@cpan.org>
+    (c) 2009-2014, Phillip Pollard <bennie@cpan.org>
     Released under the Perl Artistic License
 
     Additional contributions:

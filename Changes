@@ -4,6 +4,7 @@ VERSIONTAG  DATETAG
 
   Corrected:
     %ENV workaround did not need BEGIN block or "our" context.
+    Added explicit declaration of Net::SSL to help with self-signed certs
 
 2.01  2010/12/9
 
