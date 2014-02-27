@@ -2,6 +2,9 @@ Revision history for VMware::API::LabManager
 
 VERSIONTAG  DATETAG
 
+  Improved:
+    Now auto-generating META.json and META.yml
+
 2.04  2014/02/19
 
   Improved:
