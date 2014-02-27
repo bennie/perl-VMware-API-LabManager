@@ -449,8 +449,7 @@ sub ListMachines {
 
 ###### CHECK THIS
 # Not Supported, but works (I believe)
-sub GetConsoleAccessInfo
-{
+sub GetConsoleAccessInfo {
 	# Attribs: ServerAddress, ServerPort,VmxLocation,Ticket
 	my($self) = shift @_;
 	my($machineId) = shift @_;
