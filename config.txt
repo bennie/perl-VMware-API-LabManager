@@ -1,0 +1,13 @@
+### Config
+
+$module = 'VMware::API::LabManager';
+
+$author  = 'Phil Pollard <bennie@cpan.org>';
+$license = 'artistic_2';
+
+$abstract    = 'VMware\'s Lab Manager public and private API';
+$description = 'VMware\'s Lab Manager public and private API used for automating the Lab Manager product.';
+
+$perl_ver = '5.006';
+
+%requires = ( 'Data::Dumper' => 0, 'SOAP::Lite' => '0.71', 'Net::SSL' => 0 );

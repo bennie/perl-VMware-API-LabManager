@@ -5,20 +5,20 @@ require CPAN::Meta::YAML; # Do both YAML and JSON
 use Data::Dumper;
 use CPAN::Meta;
 use strict;
-  
+
 ### Config
 
-my $module = 'VMware::API::LabManager';
+my ($module, $author,  $license, $abstract, $description, $perl_ver, %requires);
 
-my $author  = 'Phil Pollard <bennie@cpan.org>';
-my $license = 'artistic_2';
+open INFILE, '<', 'config.txt' or die "Can't open 'config.txt'";
+my $text = join('',<INFILE>);
+close INFILE;
 
-my $abstract    = 'VMware\'s Lab Manager public and private API';
-my $description = 'VMware\'s Lab Manager public and private API used for automating the Lab Manager product.';
+eval $text;
+die $@ if $@;
 
-my $perl_ver = '5.006';
-
-my %requires = ( 'Data::Dumper' => 0, 'SOAP::Lite' => '0.71', 'Net::SSL' => 0 );
+die "Bad config." unless $module && $author && $license && 
+  $abstract && $description && $perl_ver && %requires;
 
 ### Post config
 
