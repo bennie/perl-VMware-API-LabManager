@@ -2,10 +2,13 @@ Revision history for VMware::API::LabManager
 
 VERSIONTAG  DATETAG
 
+  Corrected:
+    POD errors in formatting codes
+
   Added:
     POD test
 
-VERSIONTAG  DATETAG
+2.07  2014/02/27
 
   Corrected:
     Makefile.PL improperly called for the prerequisite Perl version.
