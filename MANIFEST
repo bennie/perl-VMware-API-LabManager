@@ -5,6 +5,7 @@ MANIFEST
 README
 TODO
 lib/VMware/API/LabManager.pm
+t/00-pod.t
 t/01-load.t
 t/02-header.t
 examples/conditions.pl
