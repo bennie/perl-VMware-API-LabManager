@@ -9,7 +9,7 @@ use SOAP::Lite; # +trace => 'debug';
 use warnings;
 use strict;
 
-our $VERSION = 'VERSIONTAG';
+$VMware::API::LabManager::VERSION = 'VERSIONTAG';
 
 ### External methods
 
