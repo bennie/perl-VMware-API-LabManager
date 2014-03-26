@@ -41,7 +41,7 @@ VERSIONTAG  DATETAG
 2.01  2010/12/09
 
   Corrected:
-    Call of Data::Dumper without instancing the module.
+    Call of Data::Dumper without instancing the module. (RT #69478)
 
   Improved:
     Added -I to example scripts for local execution within the distribution
