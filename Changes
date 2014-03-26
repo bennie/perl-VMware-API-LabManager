@@ -2,6 +2,11 @@ Revision history for VMware::API::LabManager
 
 VERSIONTAG  DATETAG
 
+  Improved:
+    Added RT bug number to Changes for release 2.01, and closed the bug
+
+2.08  2014/03/06
+
   Corrected:
     POD errors in formatting codes
 
