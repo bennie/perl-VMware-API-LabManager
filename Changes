@@ -2,6 +2,14 @@ Revision history for VMware::API::LabManager
 
 VERSIONTAG  DATETAG
 
+  Corrected:
+    Using GNU TAR now. The previous release had PAX headers in the tar file.
+
+  Improved:
+    Build scripts now automatically configure minium perl version.
+
+2.09  2014/03/26
+
   Improved:
     Added RT bug number to Changes for release 2.01, and closed the bug
 
