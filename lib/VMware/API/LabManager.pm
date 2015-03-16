@@ -1542,7 +1542,7 @@ Code to checkout, deploy, undeploy and delete a configuration:
 
  	use VMware::API::LabManager;
 
-    my $labman = new VMware::LabManager ( $username, $password, $server, $orgname, $workspace );
+        my $labman = new VMware::API::LabManager ( $username, $password, $server, $orgname, $workspace );
 
  	# Get the id of the config you are going to check out
  	my $config = $labman->GetSingleConfigurationByName("myConfigName");
