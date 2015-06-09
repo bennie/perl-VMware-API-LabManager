@@ -35,6 +35,7 @@ AUTHORSHIP:
     Released under the Perl Artistic License
 
     Additional contributions:
+	Felix @ https://github.com/xxfelixxx
         Cameron Berkenpas <cberkenpas@paypal.com>
 
     Derived from VMWare::LabmanSoap alpha.
