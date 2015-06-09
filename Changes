@@ -3,6 +3,11 @@ Revision history for VMware::API::LabManager
 VERSIONTAG  DATETAG
 
   Corrected:
+    Documentation errors found by Felix. (https://github.com/xxfelixxx)
+
+2.10  2014/04/30
+
+  Corrected:
     Using GNU TAR now. The previous release had PAX headers in the tar file.
 
   Improved:
