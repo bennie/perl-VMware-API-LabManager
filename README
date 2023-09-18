@@ -9,6 +9,14 @@ SYNOPSIS:
   public and private APIs for the VMware product Lab Manager.
 
 ================================================================================
+END OF LIFE NOTICE:
+================================================================================
+
+	VMware ended support for Lab Manager on May 31, 2014.
+
+	Correspondingly, this module will likely see no further development.
+
+================================================================================
 INSTALLATION:
 ================================================================================
 

@@ -1575,6 +1575,12 @@ Lab Manager is a product created by VMware that provides development and test
 teams with a virtual environment to deploy systems and networks of systems in a
 short period of a time.
 
+=head1 END OF LIFE NOTICE:
+
+VMware ended support for Lab Manager on May 31, 2014.
+
+Correspondingly, this module will likely see no further development.
+
 =head1 RETURNED VALUES
 
 Many of the methods return hash references or arrays of hash references that
